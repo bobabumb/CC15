@@ -18,6 +18,27 @@ function addRiskItem(riskName, riskLevel, department) {
 const resolveButton = riskCard.querySelector(".resolveButton");
 resolveButton.addEventListener("click", function ());
 }
+// task 5 implementing bulk updates
+function increaseRiskLevels () {
+    const riskCards = document.querySelectorAll(".riskCard");
+    riskCards.forEach((riskCard) => {
+        const riskLevelText = riskCard.querySelector(".riskLevelText");
+        let currentLevel = riskLevelText.textContent.trim();
+
+        switch (currentLevel.toLowerCase()) {
+            case "low":
+                riskLevelText.textContent = "medium";
+                updateRiskCardStyle(riskCard, "medium");
+                break;
+            case "medium":
+                riskLevelText.textContent = "high";
+                updateRiskCardStyle(riskCard, "high");
+                break;
+            case "high":
+                default: // does nothing
+        }
+    });
+}
 // task 4 categorizing risks by level
 function updateRiskCardStyle(riskCard, riskLevel) {
     switch (riskLevel.toLowerCase()) {
@@ -34,6 +55,13 @@ function updateRiskCardStyle(riskCard, riskLevel) {
             riskCard.style.backgroundColor = "white";
     }
 }
+document.getElementById("riskForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+    const riskName = document.getElementById("riskName").value;
+    const riskLevel = document.getElementById("riskLevel").value;
+    const department = document.getElementById("department").value;
+
 // task 2 adding risk items dynamically
 addRiskItem(riskName, riskLevel, department);
 document.getElementById("riskForm").reset();
+});
