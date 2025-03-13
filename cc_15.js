@@ -15,3 +15,6 @@ function addRiskItem(riskName, riskLevel, department) {
     <button class="resolveButton">resolve</button>
     `;
 }
+// task 2 adding risk items dynamically
+addRiskItem(riskName, riskLevel, department);
+document.getElementById("riskForm").reset();
