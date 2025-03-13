@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RISK MANAGEMENT DASH SETUP</title>
+    <link rel="stylesheet" href="cc_15.css">
+</head>
+<body>
+    <h1> RISK MANAGEMENT DASH SETUP</h1>
+    <!--increase risk level button-->
+    <button id="increaseRiskLevels">Increase Risk Level</button>
+    <!--risk item container-->
+    <div id="riskDashboard">
+        <!--risk items dynamically added here-->
+    </div>
+    <form id="riskForm">
+        <label for="riskName">Risk Name:</label>
+        <input type="text" id="riskName" name="riskName" required>
+        <label for="riskLevel">Risk Level</label>
+        <select id ="riskLevel" name="riskLevel" required>
+            <option value="low">low</option>
+            <option value="medium">medium</option>
+            <option value="high">high</option>
+        </select>
+
+        <label for="department">department:</label>
+        <input type="text" id="department" name="department" required>
+    </form>
+    <script src="cc_15.js"></script>
+</body>
+</html>
