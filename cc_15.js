@@ -14,6 +14,9 @@ function addRiskItem(riskName, riskLevel, department) {
     <p><strong>department:</strong>${department}</p>
     <button class="resolveButton">resolve</button>
     `;
+// task 3 removing risk items
+const resolveButton = riskCard.querySelector(".resolveButton");
+resolveButton.addEventListener("click", function ());
 }
 // task 2 adding risk items dynamically
 addRiskItem(riskName, riskLevel, department);
