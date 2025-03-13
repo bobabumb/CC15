@@ -75,3 +75,18 @@ document.getElementById("riskForm").addEventListener("submit", function (event) 
 addRiskItem(riskName, riskLevel, department);
 document.getElementById("riskForm").reset();
 });
+document.getElementById("increaseRiskLevels").addEventListener("click", increaseRiskLevels);
+
+// test cases task 2
+addRiskItem("data breach", "high", "IT");
+addRiskItem("supply chain distribution", "medium", "operations");
+
+// test case task 3
+addRiskItem("market fluctuations", "high", "finances");
+
+// test cases task 4
+addRiskItem("cybersecurity threat", "high", "IT");
+addRiskItem("HR compliance issue", "low", "human resources");
+
+// test case task 5
+addRiskItem("employee retention", "low", "HR");
